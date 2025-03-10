@@ -1,0 +1,21 @@
+#!/bin/sh
+case "$1" in
+  start)
+    echo "LOADING SCULL"
+    modprobe scull
+    ;;
+  stop)
+    echo "UNLOADING SCULL"
+    rmmod scull
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+esac
+exit 0
+
+
+
+
+
+
